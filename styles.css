@@ -1,0 +1,110 @@
+/* General Styles */
+body {
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(135deg, #c8deff 0%, #1d1d1d 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background: #4a4a4a; /* Slightly darker background for better contrast */
+  padding: 30px 40px; /* Increased padding for more space */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Slightly larger shadow for depth */
+  border-radius: 15px; /* Increased border-radius for a softer look */
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+  animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+  font-size: 2.5rem; /* Increased font size */
+  margin-bottom: 20px;
+  color: #ffffff; /* White color for better contrast */
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+#riddle {
+  font-size: 1.5rem; /* Increased font size */
+  margin-bottom: 20px;
+  color: #e0e0e0; /* Light grey color */
+  animation: slideIn 2s ease-in-out;
+}
+
+input[type="text"] {
+  width: calc(100% - 20px);
+  padding: 15px; /* Increased padding */
+  font-size: 1.1rem; /* Slightly larger font size */
+  border: 2px solid #ccc;
+  border-radius: 10px; /* Increased border-radius */
+  margin-bottom: 20px;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+  border-color: #00ffc8; /* Match the button color */
+  outline: none;
+}
+
+button {
+  padding: 12px 25px; /* Increased padding */
+  font-size: 1.1rem; /* Slightly larger font size */
+  color: #000000;
+  background-color: #00ffc8;
+  border: none;
+  border-radius: 10px; /* Increased border-radius */
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #00d3a5;
+}
+
+#resultMessage {
+  margin-top: 20px;
+  font-size: 1.5rem; /* Increased font size */
+  color: #d9534f;
+  animation: bounceIn 1s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes bounceIn {
+  from,
+  20%,
+  40%,
+  60%,
+  80%,
+  to {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
